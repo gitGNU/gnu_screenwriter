@@ -1,0 +1,357 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<meta name="description" content="Motion Picture Fundamentals">
+<meta name="keywords" content="video editing, audio, music, photography, digital, art, visual artist, graphic artist, graphic design, sound design">
+<meta name="Subject" content="Free Screenwriting for Free Artists">
+<meta name="ROBOTS" content="nofollow">
+<meta name="MSSmartTagsPreventParsing" content="TRUE">
+<meta name="distribution" content="global">
+<meta name="author" content="vim">
+<title>Free Screenwriting for Free Artists</title>
+<link rel="stylesheet" href="./stylesheet.css" type="text/css" media="screen" />
+<link href='http://fonts.googleapis.com/css?family=Special+Elite&v2' rel='stylesheet' type='text/css'>
+<link href='http://fonts.googleapis.com/css?family=OFL+Sorts+Mill+Goudy+TT' rel='stylesheet' type='text/css'>
+<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.6.2/jquery.min.js"></script>
+<script type="text/javascript" src="dropdown.js"></script>
+</head>
+<body>
+<!-- MENU -->
+<br><br>
+	<ul class="dropper">
+		<li><a href="./index.html">Home</a></li>
+		<li><a href="#url">Get Started</a>
+			<ul>
+				<li><a href="./unixy.html">GNU Linux,
+				BSD, Solaris, Ilumos</a></li>
+				<li><a href="./macos.html">Mac OS</a></li>
+				<li><a href="./windows.html">Windows</a></li>
+			</ul>
+		</li>
+		<li><a href="#url">Advanced Usage</a>
+			<ul>
+				<li><a href="./files.html">File Management</a></li>
+				<li><a href="./tools/intro.html">Screenplay-Tools</a>
+					<ul>
+						<li><a href="./tools/intro.html">screenplay-tools</a></li>
+						<li><a href="./tools/build.html">screenplay-build</a></li>
+						<li><a href="./tools/title">screenplay-title</a></li>
+						<li><a href="./tools/print.html">screenplay-print</a>
+							<ul>
+							<li><a href="./tools/print.html#paper">Printing Hardcopies</a></li>
+							<li><a href="./tools/print.html#pdf">Printing
+							to PDF</a></li>						
+							</ul>
+						</li>
+						<li><a href="./tools/location.html">screenplay-location</a></li>
+						<li><a href="./tools/character.html">screenplay-character</a></li>
+					</ul>
+				</li>
+			</ul>
+		</li>
+		<li><a href="./download.html">Download</a></li>
+
+		<li><a href="#url">Links</a>
+			<ul>
+				<li><a href="http://www.gnu.org/philosophy/free-sw.html">What is Free Software?</a></li>
+				<li><a href="#url">More Information
+				about Emacs</a>
+					<ul>
+						<li><a href="http://emacswiki.org">Emacs Wiki</a></li>
+						<li><a href="http://www.gnu.org/software/emacs/manual/emacs.html">Emacs Documentation</a></li>
+						<li><a href="http://orgmode.org">Emacs
+						Org-Mode</a></li>
+						</ul>
+				</li>
+				<li><a href="http://www.slackermedia.info">Slackermedia</a>
+					</li>
+				<li><a href="ubuntustudio.org">Ubuntu Studio</a></li>
+			</ul>
+		</li>
+		<li><a href="http://www.slackermedia.info/contact">Contact</a></li>
+	</ul>
+
+<!-- BODY -->
+
+<div id="content">
+<a href="http://savannah.nongnu.org/project/screenwriter"><img
+							      class="logo"
+							      src="screenwriter.png"
+							      alt="Click here to download this software"><h3 class="logo">Download</h3></a>
+</div>
+
+<div id="title">
+<h1>Getting Started</h1>
+<h2>On GNU Linux, BSD, and other Unixy Systems</h2>
+<p>If you're already running GNU Linux, you are either dirt poor or
+  you value your data's freedom, or both.  Welcome to the club!
+</p>
+
+<p>
+You may also already be familiar with GNU Emacs, or you might not.
+  Either way, getting started with Screenwriter-mode is as simple as
+  installing Emacs, installing Screenwriter, and writing.
+</p>
+
+<h2>1. Installing GNU Emacs</h2>
+<p>Emacs is such an ubiquitous companion to Unix and Unix-like systems
+  that usually your OS already has a very simple way of installing it,
+  if it's not already installed.</p>
+
+<p>So, the short version is to check first if you have Emacs
+  installed:</p>
+
+<div class="programlisting">
+<p>$ which emacs</p>
+<p>&#47;usr&#47;bin&#47;emacs</p>
+</div>
+
+<p>
+If your terminal does return something like &#47;usr&#47;bin&#47;emacs
+then yes, you have Emacs installed and can skip to the next step.
+Otherwise, you'll need to install Emacs.  One way to do this is to
+download Emacs from <a
+href="http://www.gnu.org/software/emacs">gnu.org&#47;software&#47;emacs</a>
+and install manually.  The more common way is to use your
+distribution's package management software.
+</p>
+
+<p>If you are using Slackware Linux, the command would be:</p>
+
+<div class="programlisting">
+<p>$ su -c 'slackpkg install emacs'</p>
+</div>
+
+<p>On Red Hat, Fedora, and many others:</p>
+<div class="programlisting">
+<p>$ su -c 'yum install emacs'</p>
+</div>
+
+<p>On Ubuntu, go to the Ubuntu One Store and search for Emacs.</p>
+
+<p>On Linux Mint and other Debian-based distributions (this may also
+include you if you are an advanced Ubuntu user) you may use:</p>
+
+<div class="programlisting">
+<p>$ sudo aptitude install emacs</p>
+</div>
+
+<p>On Debian:</p>
+<div class="programlisting">
+<p>$ su -c 'aptitude install emacs'</p>
+</div>
+
+<p>On freeBSD and similar:</p>
+<div class="programlisting">
+<p>$ cd /usr/ports/editors/emacs23</p>
+<p>$ su -c 'make; make install; make clean'</p>
+</div>
+
+<p>On Solaris, you can use the <a
+href="http://www.blastwave.org">blastwave.org</a> CSW or <a
+href="http://www.opencsw.org">openCSW.org</a> collection to install
+emacs.
+</p>
+
+<h2>2. Installing Screenwriter</h2>
+
+<p>Now that you have Emacs installed, you should launch it just to
+establish that it does indeed work.  Launch Emacs from either your
+Application menu or from a terminal by typing emacs.
+</p>
+
+<p>
+Emacs should start.  Yes, it looks just like a normal application!
+Not at all the scary, for-advanced-users-only, confusing app that it's
+sometimes made out to be, is it?
+</p>
+
+<p>
+Now that it's launched, quit it by selecting Exit from the File
+menu or hitting <strong>control-x</strong> and then <strong>control-c</strong>, in succession.
+</p>
+
+<p>To install Screenwriter, you need to download it.  So do that
+first.  After you've downloaded it, you should have a
+screenwriter.tar.bz2 file somewhere on your computer; uncompress this
+by either right-clicking it in your file manager or using the terminal
+command 
+</p>
+
+<div class="programlisting">
+<p>tar -xf screenwriter.tar.bz2</p>
+</div>
+
+<p>
+Next, create a directory in your home folder for all of your personal
+Emacs extensions.  You can call this directory whatever you like; some
+people call it <strong>elisp.d</strong>, some people <strong>.elisp</strong>, others <strong>.elisp.d</strong>; whatever.
+</p>
+
+<p>
+It doesn't matter what you call it but I call it
+<strong>elisp</strong> so that's what I'll use here.
+</p>
+
+<div class="programlisting">
+<p>$ mkdir ~/elisp</p>
+</div>
+
+<p>
+Then copy the screenwriter.el file into that directory:
+</p>
+
+<div class="programlisting">
+<p>$ cp ./screenwriter.el ~/elisp</p>
+</div>
+
+<p>
+Now it's installed.  But wait! we need to configure a few things first.
+</p>
+
+<h2>3. Configuring Emacs</h2>
+
+<p>
+Create a file in your home directory (in fact it may already exist) called .emacs and then open it in a text editor:
+</p>
+
+<div class="programlisting">
+$ touch ~/.emacs
+$ emacs ~/.emacs
+</div>
+
+<p>
+In the .emacs file, you should add at least these lines:
+</p>
+
+<div class="programlisting">
+<p>(add-to-list 'load-path "~/elisp")</p>
+<p>(require 'screenwriter)</p>
+<p>(global-set-key (kbd "&gt;f1&lt;")   'screenwriter-mode)</p>
+<p>(setq auto-mode-alist (cons '("\\.scp" . screenwriter-mode) auto-mode-alist))</p>
+<p>(setq auto-mode-alist (cons '("\\.screenplay" . screenwriter-mode) auto-mode-alist))</p>
+</div>
+
+<p>
+Line by line, this means: 
+</p>
+
+<ul>
+<li>Add your personal elisp directory to the path of all instances of
+Emacs launched by you.</li>
+<li>Make the screenwriter-mode available to Emacs when you hit M-x.  Load the
+Screenwriter mode when you hit F1 from within Emacs.</li>
+<li>Set Emacs to start screenwriter-mode whenever you open a file ending in .scp or .screenplay</li>
+</ul>
+
+<p>Save the file, close Emacs, re-launch it, and start writing screenplays.</p>
+
+<h2>4. Using Screenwriter-mode</h2>
+
+<p>
+If you've never used Emacs, you'll find it unique.  Of course,
+"unique" hardly makes it difficult; in fact, its unique qualities are
+mostly the reasons people have loved and used Emacs for so long.
+</p>
+
+<p>
+GNU Emacs existed long before popular word processors and graphic
+applications, so all of the control-c to copy and control-v to paste
+and control-s to save and similar shortcuts you might know? throw them
+out.  They weren't even invented when Emacs came around.
+</p>
+
+<p>
+Emacs uses sequential key shortcuts, logically divided into three main
+categories:</p>
+
+<ul>
+<li><strong>control-x</strong> for application commands like copy, paste, save, and so
+on.</li>
+<li><strong>alt-x</strong> (or <strong>escape x</strong> if you don't
+have an Alt key) for document commands, like help with formatting, font
+styles, bulk text replacement, and so on.</li>
+<li><strong>control-c</strong> for special commands that the user may create for their
+own use.</li>
+</ul>
+
+<p>If you've never used Emacs, you should practise a little at the
+keyboard shortcuts.  Try hitting <strong>control-x</strong> to see how it places you in
+a "command mode" (after you press <strong>control-x</strong>, look down at the bottom
+of your Emacs window and you'll notice that Emacs is patiently
+awaiting a second key press), and then <strong>control-f</strong> for "Find File",
+meaning you wish to open a new file.  Then type in a new name for the
+blank document you about to open, and hit return.
+</p>
+
+<p>
+Of course, you could also just go to the File menu and select "Open" or
+"Visit New File".
+</p>
+
+<p>
+Now that you have a blank document, you can enter screenwriter-mode by
+pressing <strong>alt-x</strong> (in Emacs terms they call this <strong>meta-x</strong>, since the Alt
+key is not always called an Alt key on all keyboards) and then typing
+in screenwriter-mode.
+</p>
+
+<p>
+Alternately, you could simply press <strong>F1</strong>, since
+we've configured Emacs with our .emacs file to assign
+<strong>F1</strong> to opening screenwriter-mode.
+</p>
+
+<p>
+Now that you are in screenwriter-mode, you can use the four
+screenwriter commands, which all use <strong>alt</strong> and a single mnemonic letter:
+</p>
+
+<ul>
+<li><strong>alt-s</strong> places you into SLUG LINE entry.</li>
+<li><strong>alt-a</strong> places you in an ACTION, or screen
+direction, block.</li>
+<li><strong>alt-d</strong> places you into a DIALOGUE block.</li>
+<li><strong>alt-t</strong> places you into a TRANSITION block.</li>
+</ul>
+
+<p>
+Usually, you do not need to press RETURN; when you have finished
+typing in a block of action, simply press <strong>alt-s d</strong> to
+enter dialogue mode, and after the dialogue is finished press
+<strong>alt-s a</strong> to get back to action, and so on.
+</p>
+
+<p>
+To save your document, use <strong>control-x</strong> and <strong>control-s</strong>, or the File menu.
+</p>
+
+<p>
+If formatting gets confused, then you can correct it with moving your
+cursor (with your arrow keys or mouse) to the block of text that is
+not properly formatted, and press <strong>control-u</strong> and then
+the format style you want to be applied to it, such as <strong>alt-s
+a</strong> or whatever.  In other words, if you accidentally typed
+some dialogue in as action, move your cursor to the paragraph, press
+<strong>control-u</strong> to place you into correction mode, and then
+<strong>alt-s d</strong> to re-format.
+</p>
+
+<p>
+That's about all there is to know about the basics of
+screenwriter-mode and GNU Emacs.  Enjoy!
+</p>
+
+</div>
+<!--   footer is below    -->
+<div id="footer">
+<p>Made on Free Software.</p>
+<img src="./badges/gimp.png" />
+<img src="./badges/emacs.png" />
+</div>
+
+
+</body>
+
+</html>

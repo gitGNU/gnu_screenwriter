@@ -1,0 +1,341 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<meta name="description" content="Motion Picture Fundamentals">
+<meta name="keywords" content="video editing, audio, music, photography, digital, art, visual artist, graphic artist, graphic design, sound design">
+<meta name="Subject" content="Free Screenwriting for Free Artists">
+<meta name="ROBOTS" content="nofollow">
+<meta name="MSSmartTagsPreventParsing" content="TRUE">
+<meta name="distribution" content="global">
+<meta name="author" content="vim">
+<title>Free Screenwriting for Free Artists</title>
+<link rel="stylesheet" href="./stylesheet.css" type="text/css" media="screen" />
+<link href='http://fonts.googleapis.com/css?family=Special+Elite&v2' rel='stylesheet' type='text/css'>
+<link href='http://fonts.googleapis.com/css?family=OFL+Sorts+Mill+Goudy+TT' rel='stylesheet' type='text/css'>
+<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.6.2/jquery.min.js"></script>
+<script type="text/javascript" src="dropdown.js"></script>
+
+</head>
+<body>
+<!-- MENU -->
+<br><br>
+	<ul class="dropper">
+		<li><a href="./index.html">Home</a></li>
+		<li><a href="#url">Get Started</a>
+			<ul>
+				<li><a href="./unixy.html">GNU Linux,
+				BSD, Solaris, Ilumos</a></li>
+				<li><a href="./macos.html">Mac OS</a></li>
+				<li><a href="./windows.html">Windows</a></li>
+			</ul>
+		</li>
+		<li><a href="#url">Advanced Usage</a>
+			<ul>
+				<li><a href="./files.html">File Management</a></li>
+				<li><a href="./tools/intro.html">Screenplay-Tools</a>
+					<ul>
+						<li><a href="./tools/intro.html">screenplay-tools</a></li>
+						<li><a href="./tools/build.html">screenplay-build</a></li>
+						<li><a href="./tools/title">screenplay-title</a></li>
+						<li><a href="./tools/print.html">screenplay-print</a>
+							<ul>
+							<li><a href="./tools/print.html#paper">Printing Hardcopies</a></li>
+							<li><a href="./tools/print.html#pdf">Printing
+							to PDF</a></li>						
+							</ul>
+						</li>
+						<li><a href="./tools/location.html">screenplay-location</a></li>
+						<li><a href="./tools/character.html">screenplay-character</a></li>
+					</ul>
+				</li>
+			</ul>
+		</li>
+		<li><a href="./download.html">Download</a></li>
+
+		<li><a href="#url">Links</a>
+			<ul>
+				<li><a href="http://www.gnu.org/philosophy/free-sw.html">What is Free Software?</a></li>
+				<li><a href="#url">More Information
+				about Emacs</a>
+					<ul>
+						<li><a href="http://emacswiki.org">Emacs Wiki</a></li>
+						<li><a href="http://www.gnu.org/software/emacs/manual/emacs.html">Emacs Documentation</a></li>
+						<li><a href="http://orgmode.org">Emacs
+						Org-Mode</a></li>
+						</ul>
+				</li>
+				<li><a href="http://www.slackermedia.info">Slackermedia</a>
+					</li>
+				<li><a href="ubuntustudio.org">Ubuntu Studio</a></li>
+			</ul>
+		</li>
+		<li><a href="http://www.slackermedia.info/contact">Contact</a></li>
+	</ul>
+
+<!-- BODY -->
+<div id="content">
+<a href="http://savannah.nongnu.org/project/screenwriter"><img class="logo" src="screenwriter.png"
+				alt="Click here to download this software"><h3 class="logo">Download</h3></a>
+</div>
+
+<div id="title">
+<h1>Screenwriter-mode</h1>
+<h2>File Management</h2>
+
+<p>
+Writers often work in one of two ways: either the way that a software
+application encourages them to work, or in whatever way they stumble
+into.  It wasn't until I got a job as a paid writer that I learned
+some amazing techniques that are common among software programmers and
+technical writers that us creative types could really learn from.
+</p>
+
+<p>
+Interestingly, the screenplay world actually has a lot more in common
+with programmers than you'd realize, when you think of how programmers
+have to re-write code and send one another changes to existing source
+code, much as a screenwriter may have to insert pages or dialogue into
+an existing screenplay without having to re-print the entire thing for
+the entire cast and crew.
+</p>
+
+<p>
+So, here are some advanced tips on how to manage, organize, and deal
+with your screenplay files.
+</p>
+
+<h2>Use Specific File Extensions</h2>
+
+<p>Having been a Mac user until fairly recently (I've since switched
+to Linux), I always thought that there was something magical about
+file extensions; if you rename an MP3 file to .txt then that file is
+destroyed, right?  Actually, as it turns out...no, that's wrong.
+</p>
+
+<p>
+There is nothing magical or sacred about file extensions.  You can
+call a file whatever you want, you simply then have to be explicit
+about what the computer should do with that file.
+</p>
+
+<p>
+That said, it's actually quite helpful to name files with sensible
+extensions, because it provides you with more information about that
+file, at a glance.  If you name your screenplay files .txt, then they
+could be anything from text clippings from an online news article that
+you like, or a shopping list, or a screenplay.  So, help yourself out
+and call your screenplay files .scp or .screenplay, like this:
+</p>
+
+<div class="progralisting">
+$ ls ~/Documents
+apocalypse1999.scp
+priv.scp
+relayer.scp
+rune.scp
+zelda.screenplay
+</div>
+
+<p>
+It not only tells you more about the file from just looking at it in
+your file manager (such as your Finder, or Dolphin, or Nautilus) but
+it also helps out when you need to do a search for a file that you've
+misplaced.  Hunting for *.scp is a lot easier than trying to remember
+what exactly you might have called the fourth revision of the second
+draft of your eleventh untitled screenplay.....
+</p>
+
+<h2>Assign MIME Types</h2>
+
+<p>
+If you followed the Getting Started tutorials on this site, then
+GNU Emacs will automatically detect when a .scp or .screenplay file
+needs to be opened in screenwriter-mode.  That's good.
+</p>
+
+<p>
+Your computer, on the other hand, won't know what to do with a .scp or
+.screenplay file.  It won't know to open it in Emacs, although it
+might auto-detect (if you're running Linux) that it is a text file, so
+it might open it in KWrite or gedit.  It is quite useful, therefore,
+to let your computer know what application it should open for you when
+you click on foo.scp or foo.screenplay.
+</p>
+
+<p>
+On KDE, for instance, you would first right click on the screenplay
+file and choose the <strong>Open With...</strong> option:
+</p>
+
+<img src="./advanced/openWith.png" />
+
+<p>
+Type in the name of the application to use with this type of file (in
+this case, obviously, that would be <strong>emacs</strong>) and make
+sure that the box next to <strong>Remember application association for
+this type of file</strong> is checked.  From now on, any time you open
+a .scp file, it will be opened in Emacs, which will switch over to
+screenwriter-mode automatically.
+</p>
+
+<img src="./advanced/remember.png" />
+
+<p>
+On Mac, select the .scp file and choose the <strong>Get Info</strong>
+option from the File menu.  In the Info panel, in the section labeled
+<strong>Open With</strong>, select <strong>Other</strong>.
+</p>
+
+<p>
+An application chooser will appear.  Choose Emacs and make sure that
+the <strong>Always Open With</strong> box is checked.
+</p>
+
+<p>
+From now on, any time you open a .scp file, it will be opened in
+Emacs, which will switch over to screenwriter-mode automatically.
+</p>
+<img src="./advanced/getInfo.png" />
+<p>
+On Windows, I believe the process is similar but have no Windows
+experience to know for sure.
+</p>
+
+<h2>Save In Chunks</h2>
+
+<p>
+I used to save my screenplays as one file that contained everything
+from the title page to the FADE OUT.  This does work but it's actually
+not very efficient.  During writing a screenplay as well as after it's
+finished, scenes are frequently moved; scene 12 becomes scene 35 and
+scene 42 becomes scene 1, and so on.  Making your screenplay a
+monolithic file means a lot of confusing searching, scrolling,
+copying, and pasting.
+</p>
+
+<p>
+The answer I use is to save each scene as a new file.  If I need to
+move scenes around, I simply open my file manager (Dolphin on KDE,
+Finder on Mac OS, Explorer? on Windows), navigate to that screenplay's
+folder, and renumber the scene I need to move.  Simple and efficient.
+</p>
+
+<p>
+Compiling my screenplay in the end is simple.  I simply concatenate
+all the scenes together into one document, which can be done in one
+simple command on Linux or a the Terminal.app on OS X:
+</p>
+
+<div class="programlisting">
+$ cat *scp > myGreatScript.screenplay
+</div>
+
+<p>
+As you can see, I reserve the .screenplay extension for only a final
+build of my complete screenplay; the .scp files are therefore the
+scene files.
+</p>
+
+<p>
+For more on these sorts of actions, such as building the screenplay,
+numbering scenes for the shooting script, and more, please see the
+<strong>screenplay-tools</strong> suite included with screenwriter-mode.
+</p>
+
+<h2>Element Databases</h2>
+
+<p>
+Some screenwriting software maintains running databases of all the
+locations and characters you use as you write.  Then, when you are
+typing out a character's name, it auto-suggests names that match what
+you seem to be typing.  Well, so does screenwriter-mode.
+</p>
+
+<p>
+As you write your screenplay, each slug line and character name will
+be rememembered for you.  For instance, if we have established a
+location called <strong>INT. COLLEGE DORM - NIGHT</strong> and we want
+to recall that exact name later, simply hit <strong>alt-s</strong> to
+enter the SLUG LINE mode, and use the arrow keys to scroll through the
+different listings of locations you've used.
+</p>
+
+<p>
+Alternately, you can search the database for locations.  I have GNU
+Emacs set so that <strong>control-s</strong> searches my document
+forwards and <strong>control-r</strong> searches my document in
+reverse.  You may configure yours to do this by adding these lines to
+your .emacs file:
+</p>
+
+<div class="programlisting">
+<p>(global-set-key (kbd "C-S") 'isearch-forward-regexp)</p>
+<p>(global-set-key (kbd "C-R") 'isearch-backward-regexp)</p>
+</div>
+
+<p>
+From now on, you can enter SLUG LINE mode (or CHARACTER in the
+DIALOGUE mode), and use <strong>control-r</strong> to search
+dynamically through your history of locations as you type; ergo, you
+would hit <strong>alt-s</strong> to get into SLUG LINE entry mode,
+then <strong>control-r</strong> to start a dynamic search, and then
+type the location, hitting <strong>Return</strong> when the location
+matches, and <strong>Return</strong> again to insert that slug line
+into the script. 
+</p>
+
+<h2>Plain Text</h2>
+
+<p>
+Many novice computer users under-estimate the power of plain text,
+until just a few too many files stop opening up due to the file
+format falling out of favor, or the software vendor going out of
+business, or your license isn't co-operating that day, or whatever.
+</p>
+
+<p>
+This is the power of plain text; it can be easily formatted, it is
+viewable and editable by any text editor on any platform, and it can
+be read by human eyes as well as screen-readers for the blind.
+</p>
+
+<p>
+Plain text can also be easily parsed, which makes the
+<strong>screenplay-tools</strong> suite possible.  With these shell
+scripts, it is possible to extract useful production information from
+the screenplay and utilize that information during pre-production.
+</p>
+
+<h2>Org-Mode Integration</h2>
+
+<p>
+Another plug-in for Emacs, called Org-Mode, specializes in
+scheduling and task management.  Learning Org-Mode can free you from
+the need of complex, expensive scheduling and budgeting software that,
+generally, have the same issues as the overly.-complex and expensive
+screenwriting software.
+</p>
+
+<p>
+To that end, screenwriter-mode can integrate on a basic level with
+Org-Mode, currently by providing lists of locations and characters in
+Org-Mode style formatting (still, naturally, plain text).
+</p>
+
+</div>
+
+<!--   footer is below    -->
+<div id="footer">
+<p>Made on Free Software.</p>
+<a href="http://www.gimp.org"><img src="./badges/gimp.png"/></a>
+<a href="http://www.gnu.org/software/emacs"><img src="./badges/emacs.png"/></a>
+<a href="http://www.slackware.com"><img src="./badges/linux.png"/></a>
+<a href="http://www.anybrowser.org/campaign/"><img src="./badges/anybrowser.png"/></a>
+<a href="http://no-www.org/"><img src="./badges/no-www-b.png"/></a>
+
+</div>
+
+</body>
+
+</html>

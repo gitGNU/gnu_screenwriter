@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<meta name="description" content="Motion Picture Fundamentals">
+<meta name="keywords" content="video editing, audio, music, photography, digital, art, visual artist, graphic artist, graphic design, sound design">
+<meta name="Subject" content="Free Screenwriting for Free Artists">
+<meta name="ROBOTS" content="nofollow">
+<meta name="MSSmartTagsPreventParsing" content="TRUE">
+<meta name="distribution" content="global">
+<meta name="author" content="vim">
+<title>Free Screenwriting for Free Artists</title>
+<link rel="stylesheet" href="../stylesheet.css" type="text/css" media="screen" />
+<link href='http://fonts.googleapis.com/css?family=Special+Elite&v2' rel='stylesheet' type='text/css'>
+<link href='http://fonts.googleapis.com/css?family=OFL+Sorts+Mill+Goudy+TT' rel='stylesheet' type='text/css'>
+<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.6.2/jquery.min.js"></script>
+<script type="text/javascript" src="../dropdown.js"></script>
+
+</head>
+<body>
+
+<!-- MENU -->
+<br><br>
+	<ul class="dropper">
+		<li><a href="../index.html">Home</a></li>
+		<li><a href="#url">Get Started</a>
+			<ul>
+				<li><a href="../unixy.html">GNU Linux,
+				BSD, Solaris, Ilumos</a></li>
+				<li><a href="../macos.html">Mac OS</a></li>
+				<li><a href="../windows.html">Windows</a></li>
+			</ul>
+		</li>
+		<li><a href="#url">Advanced Usage</a>
+			<ul>
+				<li><a href="../files.html">File Management</a></li>
+				<li><a href="./intro.html">Screenplay-Tools</a>
+					<ul>
+						<li><a href="./intro.html">screenplay-tools</a></li>
+						<li><a href="./build.html">screenplay-build</a></li>
+						<li><a href="./title">screenplay-title</a></li>
+						<li><a href="#url">screenplay-print</a>
+							<ul>
+							<li><a href="./paper.html">Printing Hardcopies</a></li>
+							<li><a href="./pdf.html">Printing
+							to PDF</a></li>						
+							</ul>
+						</li>
+						<li><a href="./location.html">screenplay-location</a></li>
+						<li><a href="./character.html">screenplay-character</a></li>
+					</ul>
+				</li>
+			</ul>
+		</li>
+		<li><a href="../download.html">Download</a></li>
+
+		<li><a href="#url">Links</a>
+			<ul>
+				<li><a href="http://www.gnu.org/philosophy/free-sw.html">What is Free Software?</a></li>
+				<li><a href="#url">More Information
+				about Emacs</a>
+					<ul>
+						<li><a href="http://emacswiki.org">Emacs Wiki</a></li>
+						<li><a href="http://www.gnu.org/software/emacs/manual/emacs.html">Emacs Documentation</a></li>
+						<li><a href="http://orgmode.org">Emacs
+						Org-Mode</a></li>
+						</ul>
+				</li>
+				<li><a href="http://www.slackermedia.info">Slackermedia</a>
+					</li>
+				<li><a href="ubuntustudio.org">Ubuntu Studio</a></li>
+			</ul>
+		</li>
+		<li><a href="http://www.slackermedia.info/contact">Contact</a></li>
+	</ul>
+
+<!-- BODY -->
+
+<div id="content">
+<a href="http://savannah.nongnu.org/project/screenwriter"><img class="logo" src="../screenwriter.png"
+				alt="Click here to download this software"><h3 class="logo">Download</h3></a>
+</div>
+
+<div id="title">
+<h1>Screenplay-tool</h1>
+<h2>Introduction</h2>
+
+<p>
+Screenplay-tools is a powerful set of helper shell scripts to aid:
+</p>
+
+<ol>
+  <li>
+    The screenwriter in formatting and printing a screenplay written in screenplay-mode in emacs.
+  </li>
+  <li>
+    The Assistant Director or Producer in getting important scheduling-related reports from the screenplay.
+  </li>
+</ol>
+
+<p>
+A <strong>shell script</strong> is a command that you must run in a
+terminal application, such as Terminal, Konsole, or xterm on GNU
+Linux, BSD, Solaris, and similar, Terminal.app on Mac OS X, or <a
+href="http://cygwin.com">CGWin</a> on Windows.
+</p>
+
+<h2>Installation</h2>
+
+<p>
+screenplay-tools requires no special apps aside from the typical GNU
+utils that are probably already on your system.  It does, of course,
+presume that you are using Emacs in screenwriter-mode.  It might work
+with screenplays created with other software (but good luck getting
+plain text versions from those), but no guarantees.
+</p>
+
+<p>
+To install, simply cd into the screenplay-tools directory and run the
+install script.  A typical scenario would be:</p>
+
+<div class="programlisting">
+<p>$ mkdir ~/bin</p>
+<p>$ PATH=$PATH:/home/$USER/bin && export PATH</p>
+<p>$ tar -xf screenplay-tools.tgz -C ~ && cd ~/screenplay-tools</p>
+<p>$ ./install.sh</p>
+</div>
+
+<p>
+Advanced users: this does not require root privs because by default it
+installs everything into your home <strong>bin</strong> directory.  If
+you would prefer these shell scripts available for all users of your
+system, just <strong>cp</strong> them, as root, to some place like
+&#47;usr&#47;local&#47;bin
+</p>
+
+<p>
+To test to see if the toolset has installed properly, run
+screenplay-help from the command line:
+</p>
+
+<div class="programlisting">
+<p>$ screenplay-help</p>
+</div>
+
+<p>
+If you get a help screen in response, then the tools are working.  If
+you get an error, you should check your ~&#47;bin folder to see if the
+scripts are there.  If they are, then check your path to make sure
+~&#47;bin is in $PATH
+</p>
+
+<div class="programlisting">
+<p>$ echo $PATH</p>
+<p>$ ls ~&#47;bin</p>
+</div>
+
+<p>
+Assuming all of that worked, you're ready to read up on the first
+tool, <a href="./build.html">screenplay-build</a>
+</p>
+</div>
+
+<!--   footer is below    -->
+<div id="footer">
+<p>Made on Free Software.</p>
+<a href="http://www.gimp.org"><img src="../badges/gimp.png"/></a>
+<a href="http://www.gnu.org/software/emacs"><img src="../badges/emacs.png"/></a>
+<a href="http://www.slackware.com"><img src="../badges/linux.png"/></a>
+<a href="http://www.anybrowser.org/campaign/"><img src="../badges/anybrowser.png"/></a>
+<a href="http://no-www.org/"><img src="../badges/no-www-b.png"/></a>
+
+</div>
+
+</body>
+
+</html>

@@ -1,0 +1,191 @@
+body {
+  color: #333;
+  margin: 0px;
+  font-family: serif;
+  font-size: 0.8em;
+  margin: 10px;
+  height: 100%;
+}
+
+a:link, a:visited, a:active {
+  color: #666;
+  text-decoration: none;
+}
+
+a:hover {
+  color: #000;
+}
+
+.ulink {
+  color: #666;
+  text-decoration: none;
+  border-bottom: 1px dotted #666;
+}
+
+.ulink a:hover {
+  color: #000;
+  border-bottom: 1px solid #000;
+}
+
+.programlisting {
+    background-color: #525645;
+    color: white;
+    padding: 3px;
+    line-height: .3em;
+    -moz-border-radius: 0px 0px 5px 5px;
+    -webkit-border-radius: 0px 0px 5px 5px;
+    border: solid 1px #333;
+    border-top: solid 10px #333;
+}
+
+#title {
+    width: 60%;
+    margin-left: 5%;
+    margin-top: -30%;
+    float: left;
+    font-family: sans, arial;
+    padding-bottom: 140px;
+}
+
+#content {
+  margin-left: 60%;
+  margin-right: 5%;
+  margin-top: 10%;
+  width: 20%;
+  float:right;
+  text-align: center;
+  background-color: #C4C4C4;
+  -moz-border-radius: 10px;
+  -webkit-border-radius: 10px;
+  padding: 10px 0px 0px 0px;
+}
+
+li {
+  list-style: none;
+}
+
+li img {
+    vertical-align: -45%;
+}
+
+h1 {
+  margin-top: 10%;
+  width: 50%;
+  margin-right: auto;
+  color: #666;
+  font-family: 'Special Elite', courier, serif;
+}
+
+h2 {
+  width: 50%;
+  margin-right: auto;
+  color: #666;
+  font-family: 'OFL Sorts Mill Goudy TT', arial, serif;
+}
+
+h3 {
+  color: #666;
+  font-family: 'OFL Sorts Mill Goudy TT', arial, serif;
+}
+
+a img {
+  vertical-align: -45%;
+  padding-right: 5px;
+  padding-left: 5px;
+}
+
+#footer {
+    clear: left;
+    margin-left: 5%;
+    width: 80%;
+    font-size: .8em;
+    background-color: #c4c4c4;
+    padding: 1px 5px 8px 8px;
+    line-height: .3em;
+    -moz-border-radius: 4px;
+    -webkit-border-radius: 4px;
+    height: 40px;
+}
+
+
+
+/* --------------- \
+|  menu item boxes |
+\ --------------- */
+.dropper ul {
+    position:absolute;  
+    margin: 0; 
+    padding: 0; 
+    list-style: none; 
+    white-space: nowrap; 
+    background: #888; 
+    border:1px solid #000; 
+    padding:10px 0; 
+    text-align:left;
+    -o-border-radius: 10px;
+    -ms-border-radius: 10px;
+    -moz-border-radius: 10px;
+    -webkit-border-radius: 10px;
+    border-radius: 10px;
+    -o-box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.5);
+    -ms-box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.5);
+    -moz-box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.5);
+    -webkit-box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.5);
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.5);
+}
+
+.dropper ul ul {
+    left:100%; 
+    margin-top:-36px; 
+    margin-left:-5px;
+}
+
+.dropper li {
+    margin: 0; 
+    padding: 0; 
+    list-style: none; 
+    display: inline-block; 
+    display: inline;
+}
+
+.dropper a {
+    display: block; 
+    font: 12px sans-serif; 
+    color: #fff; 
+    line-height: 25px; 
+    text-decoration: none; 
+    padding: 0 20px 0 10px;
+}
+
+.dropper li a.a-top,
+.dropper li a.a-sub {background:url(arrow-right.gif) no-repeat right center;}
+
+/* ----------------- \
+|  selection colour  |
+\ ----------------- */
+.dropper li.clicked > a {background-color: #666;}
+
+
+/* -------------- \
+|  the menu bar   |
+\ -------------- */
+.dropper {
+    padding: 0; 
+    margin: 0; 
+    list-style: none; 
+    text-align: center; 
+    position: relative; 
+    background: #777; 
+    height: 25px;
+}
+
+/* -------------- \
+|   text stylin   |
+\ -------------- */
+.dropper > li > a {display:inline-block; margin-right:-5px; height:25px;}
+.dropper > li {position:relative; display:inline-block;}
+
+.dropper > li {*display:inline;}
+.dropper > li > ul {top:25px; left:-1px;}
+
+.dropper ul {display:none;}

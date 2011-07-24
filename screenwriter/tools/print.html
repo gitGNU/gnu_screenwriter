@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<meta name="description" content="Motion Picture Fundamentals">
+<meta name="keywords" content="video editing, audio, music, photography, digital, art, visual artist, graphic artist, graphic design, sound design">
+<meta name="Subject" content="Free Screenwriting for Free Artists">
+<meta name="ROBOTS" content="nofollow">
+<meta name="MSSmartTagsPreventParsing" content="TRUE">
+<meta name="distribution" content="global">
+<meta name="author" content="vim">
+<title>Free Screenwriting for Free Artists</title>
+<link rel="stylesheet" href="../stylesheet.css" type="text/css" media="screen" />
+<link href='http://fonts.googleapis.com/css?family=Special+Elite&v2' rel='stylesheet' type='text/css'>
+<link href='http://fonts.googleapis.com/css?family=OFL+Sorts+Mill+Goudy+TT' rel='stylesheet' type='text/css'>
+<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.6.2/jquery.min.js"></script>
+<script type="text/javascript" src="../dropdown.js"></script>
+
+</head>
+<body>
+
+<!-- MENU -->
+<br><br>
+	<ul class="dropper">
+		<li><a href="../index.html">Home</a></li>
+		<li><a href="#url">Get Started</a>
+			<ul>
+				<li><a href="../unixy.html">GNU Linux,
+				BSD, Solaris, Ilumos</a></li>
+				<li><a href="../macos.html">Mac OS</a></li>
+				<li><a href="../windows.html">Windows</a></li>
+			</ul>
+		</li>
+		<li><a href="#url">Advanced Usage</a>
+			<ul>
+				<li><a href="../files.html">File Management</a></li>
+				<li><a href="./intro.html">Screenplay-Tools</a>
+					<ul>
+						<li><a href="./intro.html">screenplay-tools</a></li>
+						<li><a href="./build.html">screenplay-build</a></li>
+						<li><a href="./title">screenplay-title</a></li>
+						<li><a href="./print.html">screenplay-print</a>
+							<ul>
+							<li><a href="./print.html#paper">Printing Hardcopies</a></li>
+							<li><a href="./print.html#pdf">Printing
+							to PDF</a></li>						
+							</ul>
+						</li>
+						<li><a href="./location.html">screenplay-location</a></li>
+						<li><a href="./character.html">screenplay-character</a></li>
+					</ul>
+				</li>
+			</ul>
+		</li>
+		<li><a href="../download.html">Download</a></li>
+
+		<li><a href="#url">Links</a>
+			<ul>
+				<li><a href="http://www.gnu.org/philosophy/free-sw.html">What is Free Software?</a></li>
+				<li><a href="#url">More Information
+				about Emacs</a>
+					<ul>
+						<li><a href="http://emacswiki.org">Emacs Wiki</a></li>
+						<li><a href="http://www.gnu.org/software/emacs/manual/emacs.html">Emacs Documentation</a></li>
+						<li><a href="http://orgmode.org">Emacs
+						Org-Mode</a></li>
+						</ul>
+				</li>
+				<li><a href="http://www.slackermedia.info">Slackermedia</a>
+					</li>
+				<li><a href="ubuntustudio.org">Ubuntu Studio</a></li>
+			</ul>
+		</li>
+		<li><a href="http://www.slackermedia.info/contact">Contact</a></li>
+	</ul>
+
+<!-- BODY -->
+
+<div id="content">
+<a href="http://savannah.nongnu.org/project/screenwriter"><img class="logo" src="../screenwriter.png"
+				alt="Click here to download this software"><h3 class="logo">Download</h3></a>
+</div>
+
+<div id="title">
+<h1>Screenplay-tool</h1>
+<h2>screenplay-print</h2>
+
+<p>
+Once you feel you're ready to print your masterpiece on actual tree
+pulp and have generated a title.page, use this command:
+</p>
+
+<div class="programlisting">
+<p>$ screenplay-print ~/myGreatScreenplay</p>
+</div>
+
+<p>
+This will attempt to auto-detect the title and author from your
+title.page (although it does allow for a manual override), indent your
+script to provide the left margin, number the scenes by occurence
+of SLUG LINES, add the title.page to the front of the document, and
+insert form feed characters to enforce page breaks.
+</p>
+
+<p>
+Finally, it will ask you to confirm printing via the Line Printing
+Daemon, <strong>lpr</strong>.  This is the direct-to-printer daemon
+usually present on a Unix-like system; you may or may not have it
+configured on your computer.
+</p>
+
+<p>
+If you do use <strong>lpr</strong> and are ready to print, then answer
+&quot;y&quot; and screenplay-print will send the printable screenplay
+and the title page to lpr (ie, your default line printer).
+</p>
+
+<p>
+Otherwise, you'll be left with a print.screenplay, which you can
+review and print at your leisure.  If you know that you do not have
+lpr configured, you can add the --no-print option to the command and
+you will not be asked whether or not you want to send the screenplay
+to lpr.
+</p>
+
+<h2>
+<a name="paper">Printing to Paper from Emacs</a>
+</h2>
+
+<p>
+The entire screenwriter-mode workflow is plain text, which is
+powerful, and it is usually easiest to just print straight from the
+command line in this case.  However, that does require you to have
+some printer set up to be your default line printer.</p>
+
+<p>
+If you don't have a default lpr printer configured, you can just open
+print.screenplay in Emacs and use its built-it postscript printing to
+do the job for you.
+</p>
+
+<img src="./postscript.png" />
+
+<h2>
+Printing to Paper with LPR
+</h2>
+
+<p>
+If you want to be able to print directly from the command line, you'll
+need to configure your printing system.  The following instructions
+were written specifically for GNU Linux, BSD, and other Unix and
+Unix-like systems; it should apply to Mac OS X but be aware that I
+have not personally tested it on OS X.
+</p>
+
+<p>
+First, open up the CUPS admin panel in a web browser.  You reach
+this by opening a web browser to 127.0.0.1:631, and you will be
+prompted for the root password.
+</p>
+
+<p>
+In the ADMINISTRATION tab of the CUPS configuration page, you can
+MANAGE PRINTERS or add a new one if you haven't used a printer on the
+system yet.  Do that, and set a printer as an lpd:// printer, and set
+that as your default.
+</p>
+
+<p>
+As an example, on Slackware GNU&#47;Linux, I can go to CUPS and add a new
+printer.  I select the production office's Ricoh 1060 printer by way
+of its IP address, so I enter <strong>lpd://192.168.68.10</strong>
+</p>
+
+<p>
+I choose its driver, which is conveniently already installed (but if
+it wasn't, I'd go to <a
+href="http://www.openprinting.org">openprinting.org</a> and find the
+ppd file).
+</p>
+
+<p>
+I would then mark this printer as my default, which means that
+anything on the command line sent to lpd will, by default, go to that
+Ricoh 1060 (aka, 192.168.68.10).
+</p>
+
+<p>
+Now to test the configuration:
+</p>
+
+<div class="programlisting">
+<p>$ echo "test" | lpr</p>
+</div>
+
+<p>
+I should get a page reading "test" moments later.  Success.
+</p>
+
+<h2>
+<a name="pdf">Printing to PDF</a>
+</h2>
+
+<p>
+If you want to save your screenplay to a PDF and email it to all your
+production staff and actors, you can do this a few different ways.
+</p>
+
+<p>
+The easiest and most direct method is to download
+<strong>text2pdf</strong>, an application written by Phil Smith, which
+takes plain text and creates a PDF from it, retaining all formatting.
+You may download text2pdf from <a
+href="http://www.eprg.org/pdfcorner/text2pdf/" target="_blank">eprg.org&#47;pdfcorner&#47;text2pdf</a>
+</p>
+
+<p>
+There is both the source code and a GNU MakeFile available for it.  To
+compile it, simply download both, place into a consolidated folder,
+and run <strong>make</strong>.  You can then move
+<strong>text2pdf</strong> to either ~/bin or a systemwide bin
+directory.
+</p>
+
+<div class="programlisting">
+<p>$ cd text2pdf</p>
+<p>$ make</p>
+<p>mv text2pdf ~/bin</p>
+</div>
+
+<p>
+Once installed, you can use it:
+</p>
+
+<div class="programlisting">
+<p>$ text2pdf print.screenplay > myGreatScreenplay.pdf</p>
+</div>
+
+<p>
+Which produces, obviously, myGreatScreenplay.pdf that will be viewable
+in any PDF viewer on most popular operating systems.
+</p>
+
+<p>
+If, on the other hand, you prefer or want to use CUPS as a pdf
+"printer", then you can download the cups-pdf ppd from <a
+href="http://www.physik.uni-wuerzburg.de/~vrbehr/cups-pdf"
+target="_blank">physik.uni-wuerzburg.de&#47;~vrbehr&#47;cups-pdf</a> 
+</p>
+
+<p>
+This is by far a more complex configuration, as you must install the
+program, create a printer backend for it, and then print to that.  A
+good overview of it can be found here at <a
+href="http://alien.slackbook.org/dokuwiki/doku.php?id=slackware:cups" 
+target="_blank">alien.slackbook.org&#47;dokuwiki&#47;doku.php?id=slackware:cups</a>
+</p>
+
+<p>
+You're now ready to read up on the next
+tool, <a href="./print.html">screenplay-location</a>
+</p>
+
+</div>
+
+<!--   footer is below    -->
+<div id="footer">
+<p>Made on Free Software.</p>
+<a href="http://www.gimp.org"><img src="../badges/gimp.png"/></a>
+<a href="http://www.gnu.org/software/emacs"><img src="../badges/emacs.png"/></a>
+<a href="http://www.slackware.com"><img src="../badges/linux.png"/></a>
+<a href="http://www.anybrowser.org/campaign/"><img src="../badges/anybrowser.png"/></a>
+<a href="http://no-www.org/"><img src="../badges/no-www-b.png"/></a>
+
+</div>
+
+</body>
+
+</html>

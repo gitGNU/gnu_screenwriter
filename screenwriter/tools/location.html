@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<meta name="description" content="Motion Picture Fundamentals">
+<meta name="keywords" content="video editing, audio, music, photography, digital, art, visual artist, graphic artist, graphic design, sound design">
+<meta name="Subject" content="Free Screenwriting for Free Artists">
+<meta name="ROBOTS" content="nofollow">
+<meta name="MSSmartTagsPreventParsing" content="TRUE">
+<meta name="distribution" content="global">
+<meta name="author" content="vim">
+<title>Free Screenwriting for Free Artists</title>
+<link rel="stylesheet" href="../stylesheet.css" type="text/css" media="screen" />
+<link href='http://fonts.googleapis.com/css?family=Special+Elite&v2' rel='stylesheet' type='text/css'>
+<link href='http://fonts.googleapis.com/css?family=OFL+Sorts+Mill+Goudy+TT' rel='stylesheet' type='text/css'>
+<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.6.2/jquery.min.js"></script>
+<script type="text/javascript" src="../dropdown.js"></script>
+
+</head>
+<body>
+
+<!-- MENU -->
+<br><br>
+	<ul class="dropper">
+		<li><a href="../index.html">Home</a></li>
+		<li><a href="#url">Get Started</a>
+			<ul>
+				<li><a href="../unixy.html">GNU Linux,
+				BSD, Solaris, Ilumos</a></li>
+				<li><a href="../macos.html">Mac OS</a></li>
+				<li><a href="../windows.html">Windows</a></li>
+			</ul>
+		</li>
+		<li><a href="#url">Advanced Usage</a>
+			<ul>
+				<li><a href="../files.html">File Management</a></li>
+				<li><a href="./intro.html">Screenplay-Tools</a>
+					<ul>
+						<li><a href="./intro.html">screenplay-tools</a></li>
+						<li><a href="./build.html">screenplay-build</a></li>
+						<li><a href="./title">screenplay-title</a></li>
+						<li><a href="./print.html">screenplay-print</a>
+							<ul>
+							<li><a href="./print.html#paper">Printing Hardcopies</a></li>
+							<li><a href="./print.html#pdf">Printing
+							to PDF</a></li>						
+							</ul>
+						</li>
+						<li><a href="./location.html">screenplay-location</a></li>
+						<li><a href="./character.html">screenplay-character</a></li>
+					</ul>
+				</li>
+			</ul>
+		</li>
+		<li><a href="../download.html">Download</a></li>
+
+		<li><a href="#url">Links</a>
+			<ul>
+				<li><a href="http://www.gnu.org/philosophy/free-sw.html">What is Free Software?</a></li>
+				<li><a href="#url">More Information
+				about Emacs</a>
+					<ul>
+						<li><a href="http://emacswiki.org">Emacs Wiki</a></li>
+						<li><a href="http://www.gnu.org/software/emacs/manual/emacs.html">Emacs Documentation</a></li>
+						<li><a href="http://orgmode.org">Emacs
+						Org-Mode</a></li>
+						</ul>
+				</li>
+				<li><a href="http://www.slackermedia.info">Slackermedia</a>
+					</li>
+				<li><a href="ubuntustudio.org">Ubuntu Studio</a></li>
+			</ul>
+		</li>
+		<li><a href="http://www.slackermedia.info/contact">Contact</a></li>
+	</ul>
+
+<!-- BODY -->
+
+<div id="content">
+<a href="http://savannah.nongnu.org/project/screenwriter"><img class="logo" src="../screenwriter.png"
+				alt="Click here to download this software"><h3 class="logo">Download</h3></a>
+</div>
+
+<div id="title">
+<h1>Screenplay-tool</h1>
+<h2>screenplay-location</h2>
+
+<p>
+Once the screenplay is locked and serious pre-production begins, one
+of the first things you'll want are LOCATION reports.  You can use
+<strong>screenplay-location</strong> to get a variety of reports on
+locations, based on the SLUG LINES in your screenplay.
+</p>
+
+<p>
+Probably you should have a preview.screenplay or a print.screenplay
+for these to work the way they are intended to work.  Of course, there's
+nothing stopping you from running it on individual scene files,
+either.  Please do note, however, that this script will not work on a
+.pdf file.
+</p>
+
+<p>
+To get a list of all locations in your screenplay, run this:
+</p>
+
+<div class="programlisting">
+<p>$ screenplay-location print.screenplay location.report</p>
+</div>
+
+<p>
+This will interactively generate one of four types of location reports,
+or one that includes them all.  It is menu-based:
+</p>
+
+<div class="programlisting">
+<p>1 List of all (unique) locations</p>
+<p>2 List of all INT. locations</p>
+<p>3 List of all EXT. locations</p>
+<p>4 List all locations in script order</p>
+<p>5 Generate all of the above in one report</p>
+</div>
+
+<p>
+By default, you end up with a printable report with appropriate
+headings to indicate what report it is.
+</p>
+
+<p>
+If, however, you do not ever to intend to create hardcopies of your
+reports, and opt to use the org-mode of Emacs, you can specify
+an output file with the <strong>.org</strong> extension, such as locations.org to
+produce a document without enforced page breaks or headers, formatted
+for use in org-mode's outline view.
+</p>
+
+<p>
+Org-mode is a major mode for Emacs which excels at project management
+and is, along with screenwriter.el and screenplay-tools, all a movie
+production needs for its organizational and scheduling needs.  Learn
+more about it, and download it, from <a href="http://www.orgmode.org" target="_blank">orgmode.org</a>
+</p>
+
+<p>
+Screenplay-location is programmed to eliminate common transitions and
+other capitalized words from its list, but there is obviously a chance
+that something will get listed as a location when it is not (if you
+have capitalized words in the script as a form of emphasis, for
+instance).  You may need to review your location list for these quirks
+before sending it out to your entire pre-production staff.
+</p>
+
+<p>
+You're now ready to read up on the next
+tool, <a href="./title.html">screenplay-character</a>
+</p>
+</div>
+
+<!--   footer is below    -->
+<div id="footer">
+<p>Made on Free Software.</p>
+<a href="http://www.gimp.org"><img src="../badges/gimp.png"/></a>
+<a href="http://www.gnu.org/software/emacs"><img src="../badges/emacs.png"/></a>
+<a href="http://www.slackware.com"><img src="../badges/linux.png"/></a>
+<a href="http://www.anybrowser.org/campaign/"><img src="../badges/anybrowser.png"/></a>
+<a href="http://no-www.org/"><img src="../badges/no-www-b.png"/></a>
+
+</div>
+
+</body>
+
+</html>
