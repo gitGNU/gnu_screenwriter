@@ -1,3 +1,8 @@
+@font-face { 
+  font-family: "codefont"; 
+  src: url("./fonts/courierprime.ttf"); 
+}
+
 body {
   color: #333;
   margin: 0px;
@@ -29,11 +34,11 @@ a:hover {
 
 .programlisting {
     background-color: #525645;
-    color: white;
-    padding: 3px;
+    color: #fff;
+    font-family: 'codefont', monospace;
+    padding: 1em 1ex;
     line-height: .3em;
-    -moz-border-radius: 0px 0px 5px 5px;
-    -webkit-border-radius: 0px 0px 5px 5px;
+    border-radius: 0px 0px 5px 5px;
     border: solid 1px #333;
     border-top: solid 10px #333;
 }
